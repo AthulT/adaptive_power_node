@@ -83,8 +83,8 @@ async def main(adapter: str):
     # 1. Device Discovery Phase
     device = None
     try:
-        scanner = BleakScanner(adapter=adapter)
-        device = await scanner.find_device_by_name(TARGET_DEVICE_NAME, timeout=SCAN_TIMEOUT_SEC)
+        #scanner = BleakScanner(adapter=adapter)
+        device = await BleakScanner.find_device_by_name(TARGET_DEVICE_NAME, timeout=SCAN_TIMEOUT_SEC, adapter=adapter)
     
     except BleakDBusError as e:
         if "org.bluez.Error.InProgress" in str(e):
