@@ -1,0 +1,2 @@
+# Load Zephyr board Kconfig descriptions.
+osource "/home/athul/Workspace/Zephyr/zephyr/boards/arm/mps2/Kconfig"
