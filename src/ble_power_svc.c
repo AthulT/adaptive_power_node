@@ -97,3 +97,40 @@ int ble_power_svc_notify_telemetry(uint16_t seq) {
 int8_t ble_power_svc_get_tx_power(void) {
     return current_tx_power;
 }
+
+static bool peer_connected;
+
+static void connected_cb(struct bt_conn *conn, uint8_t err)
+{
+    if (err) {
+        printk("[BLE] Connection failed (err 0x%02x)\n", err);
+        return;
+    }
+    peer_connected = true;
+    printk("[BLE] Connected\n");
+}
+
+static void disconnected_cb(struct bt_conn *conn, uint8_t reason)
+{
+    peer_connected = false;
+    printk("[BLE] Disconnected (reason 0x%02x)\n", reason);
+}
+
+BT_CONN_CB_DEFINE(conn_callbacks) = {
+    .connected = connected_cb,
+    .disconnected = disconnected_cb,
+};
+
+/* btvirt only emits an advertising report when advertising is enabled,
+ * so re-enable periodically or BlueZ never sees us again after discovery. */
+void ble_power_svc_readvertise_if_idle(void)
+{
+    if (peer_connected) {
+        return;
+    }
+    bt_le_adv_stop();
+    int err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), NULL, 0);
+    if (err) {
+        printk("Re-advertise failed (err %d)\n", err);
+    }
+}

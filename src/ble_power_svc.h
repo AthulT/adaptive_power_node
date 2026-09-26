@@ -24,5 +24,5 @@ int ble_power_svc_notify_telemetry(uint16_t seq);
  * @return Current TX power in dBm.
  */
 int8_t ble_power_svc_get_tx_power(void);
-
+void ble_power_svc_readvertise_if_idle(void);
 #endif /* BLE_POWER_SVC_H_ */

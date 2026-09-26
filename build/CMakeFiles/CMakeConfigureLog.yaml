@@ -233,240 +233,6 @@ events:
         reason: "no_exist"
       -
         path: "/home/athul/Workspace/Zephyr/build/ZephyrBuildConfig.cmake"
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "/home/athul/Workspace/Zephyr/zephyr/cmake/modules/zephyr_default.cmake:28 (find_package)"
-      - "/home/athul/Workspace/Zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)"
-      - "/home/athul/Workspace/Zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:83 (include_boilerplate)"
-      - "CMakeLists.txt:3 (find_package)"
-    name: "ZephyrBuildConfiguration"
-    configs:
-      -
-        filename: "ZephyrBuild.cps"
-        kind: "cps"
-      -
-        filename: "zephyrbuild.cps"
-        kind: "cps"
-      -
-        filename: "ZephyrBuildConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "zephyrbuild-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "optional"
-      quiet: true
-      global: false
-      policy_scope: false
-      bypass_provider: false
-      names:
-        - "ZephyrBuild"
-      search_paths:
-        - "/home/athul/Workspace/Zephyr/zephyr/../*"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/pkgRedirects/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/bootloader/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/cmake/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/cmake/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/adaptive_controller/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/cmake/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/cmake/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/zephyr/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/modules/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/ZephyrBuildConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/zephyrbuild-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/lib/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/lib/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/share/cps/ZephyrBuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/.west/share/cps/zephyrbuild.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/athul/Workspace/Zephyr/build/ZephyrBuildConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -535,6 +301,30 @@ events:
         reason: "no_exist"
       -
         path: "/home/athul/Workspace/Zephyr/.venv/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/bluez/share/cps/zephyrbuild.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -2592,8 +2382,8 @@ events:
     checks:
       - "Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
     directories:
-      source: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-l9lZiZ"
-      binary: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-l9lZiZ"
+      source: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-IGn1uS"
+      binary: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-IGn1uS"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -2604,11 +2394,11 @@ events:
       variable: "C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
       cached: true
       stdout: |
-        Change Dir: '/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-l9lZiZ'
+        Change Dir: '/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-IGn1uS'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_00155
-        [1/2] /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -std=c99   -Wformat-signedness -o CMakeFiles/cmTC_00155.dir/src.c.obj -c /home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-l9lZiZ/src.c
-        [2/2] : && /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd  CMakeFiles/cmTC_00155.dir/src.c.obj -o cmTC_00155   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e0155
+        [1/2] /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -std=c99   -Wformat-signedness -o CMakeFiles/cmTC_e0155.dir/src.c.obj -c /home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-IGn1uS/src.c
+        [2/2] : && /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd  CMakeFiles/cmTC_e0155.dir/src.c.obj -o cmTC_e0155   && :
         
       exitCode: 0
   -

@@ -15,7 +15,8 @@ int main(void) {
         k_msleep(500);
         packet_seq++;
         
-        ble_power_svc_notify_telemetry(packet_seq);
-    }
+	ble_power_svc_notify_telemetry(packet_seq);
+	ble_power_svc_readvertise_if_idle();
+}
     return 0;
 }
