@@ -2,6 +2,7 @@ import asyncio
 import time
 
 import bumble.logging
+import logging
 from bumble.controller import Controller
 from bumble.core import AdvertisingData
 from bumble.device import Device, Peer
@@ -271,6 +272,7 @@ async def main():
 
 if __name__ == "__main__":
     bumble.logging.setup_basic_logging("WARNING")
+    logging.getLogger("bumble.controller").setLevel(logging.CRITICAL)
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
