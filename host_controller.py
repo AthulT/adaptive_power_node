@@ -12,7 +12,7 @@ TARGET_DEVICE_NAME = "EFR32_M33_QEMU"
 POWER_SERVICE_UUID = "12345678-1234-5678-1234-56789abcdef0"
 POWER_CHAR_UUID    = "12345678-1234-5678-1234-56789abcdef1"
 
-SCAN_TIMEOUT_SEC = 10.0
+SCAN_TIMEOUT_SEC = 30.0
 
 
 # ==============================================================================
