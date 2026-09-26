@@ -1,11 +1,14 @@
-/ {
-    chosen {
-        zephyr,bt-c2h-uart = &uart1;
-        zephyr,bt-hci = &uart1;
-    };
-};
-
 &uart1 {
     status = "okay";
     current-speed = <115200>;
+    bt_hci_uart: bt_hci_uart {
+        compatible = "zephyr,bt-hci-uart";
+        status = "okay";
+    };
+};
+
+/ {
+    chosen {
+        zephyr,bt-hci = &bt_hci_uart;
+    };
 };

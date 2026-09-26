@@ -450,16 +450,19 @@ pinctrl: pinctrl {
 # 136 "/home/athul/Workspace/Zephyr/zephyr/boards/arm/mps2/mps2_an521_cpu0.dts" 2
 # 0 "<command-line>" 2
 # 1 "/home/athul/Workspace/Zephyr/adaptive_power_node/app.overlay" 1
-/ {
-    chosen {
-        zephyr,bt-c2h-uart = &uart1;
-        zephyr,bt-hci = &uart1;
-    };
-};
-
 &uart1 {
     status = "okay";
     current-speed = <115200>;
+    bt_hci_uart: bt_hci_uart {
+        compatible = "zephyr,bt-hci-uart";
+        status = "okay";
+    };
+};
+
+/ {
+    chosen {
+        zephyr,bt-hci = &bt_hci_uart;
+    };
 };
 # 0 "<command-line>" 2
 # 1 "/home/athul/Workspace/Zephyr/zephyr/misc/empty_file.c"

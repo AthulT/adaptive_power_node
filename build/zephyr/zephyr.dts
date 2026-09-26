@@ -8,12 +8,11 @@
 
 	/* node '/chosen' defined in zephyr/dts/common/skeleton.dtsi:13 */
 	chosen {
-		zephyr,console = &uart0;     /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:28 */
-		zephyr,shell-uart = &uart0;  /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:29 */
-		zephyr,sram = &ssram2_3;     /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:37 */
-		zephyr,flash = &ssram1;      /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:38 */
-		zephyr,bt-c2h-uart = &uart1; /* in adaptive_power_node/app.overlay:3 */
-		zephyr,bt-hci = &uart1;      /* in adaptive_power_node/app.overlay:4 */
+		zephyr,console = &uart0;      /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:28 */
+		zephyr,shell-uart = &uart0;   /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:29 */
+		zephyr,sram = &ssram2_3;      /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:37 */
+		zephyr,flash = &ssram1;       /* in zephyr/boards/arm/mps2/mps2_an521_cpu0.dts:38 */
+		zephyr,bt-hci = &bt_hci_uart; /* in adaptive_power_node/app.overlay:12 */
 	};
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:15 */
@@ -162,8 +161,14 @@
 				interrupt-names = "tx",
 				                  "rx";             /* in zephyr/boards/arm/mps2/mps2_an521-common.dtsi:95 */
 				clocks = < &sysclk >;               /* in zephyr/boards/arm/mps2/mps2_an521-common.dtsi:96 */
-				status = "okay";                    /* in adaptive_power_node/app.overlay:9 */
-				current-speed = < 0x1c200 >;        /* in adaptive_power_node/app.overlay:10 */
+				status = "okay";                    /* in adaptive_power_node/app.overlay:2 */
+				current-speed = < 0x1c200 >;        /* in adaptive_power_node/app.overlay:3 */
+
+				/* node '/soc/peripheral@50000000/uart@201000/bt_hci_uart' defined in adaptive_power_node/app.overlay:4 */
+				bt_hci_uart: bt_hci_uart {
+					compatible = "zephyr,bt-hci-uart"; /* in adaptive_power_node/app.overlay:5 */
+					status = "okay";                   /* in adaptive_power_node/app.overlay:6 */
+				};
 			};
 
 			/* node '/soc/peripheral@50000000/uart@202000' defined in zephyr/boards/arm/mps2/mps2_an521-common.dtsi:100 */

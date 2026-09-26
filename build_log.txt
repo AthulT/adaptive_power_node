@@ -1,0 +1,46 @@
+-- west build: making build dir /home/athul/Workspace/Zephyr/adaptive_power_node/build pristine
+-- west build: generating a build system
+-- Application: /home/athul/Workspace/Zephyr/adaptive_power_node
+-- CMake version: 4.3.4
+-- Found Python3: /home/athul/Workspace/Zephyr/.venv/bin/python3 (found suitable version "3.14.7", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: /home/athul/.cache/zephyr
+-- Zephyr version: 4.4.99 (/home/athul/Workspace/Zephyr/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: mps2, qualifiers: an521/cpu0
+-- Found host-tools: zephyr 1.0.1 (/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1)
+-- Found Dtc: /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.7.0", minimum required is "1.4.6")
+-- Found BOARD.dts: /home/athul/Workspace/Zephyr/zephyr/boards/arm/mps2/mps2_an521_cpu0.dts
+-- Found devicetree overlay: /home/athul/Workspace/Zephyr/adaptive_power_node/app.overlay
+-- Generated zephyr.dts: /home/athul/Workspace/Zephyr/adaptive_power_node/build/zephyr/zephyr.dts
+-- Generated pickled edt: /home/athul/Workspace/Zephyr/adaptive_power_node/build/zephyr/edt.pickle
+-- Generated devicetree_generated.h: /home/athul/Workspace/Zephyr/adaptive_power_node/build/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing /home/athul/Workspace/Zephyr/zephyr/Kconfig
+Loaded configuration '/home/athul/Workspace/Zephyr/zephyr/boards/arm/mps2/mps2_an521_cpu0_defconfig'
+Merged configuration '/home/athul/Workspace/Zephyr/adaptive_power_node/prj.conf'
+-- Configuring incomplete, errors occurred!
+
+Loading Zephyr default modules (Zephyr base).
+
+warning: QEMU_ICOUNT_SHIFT (defined at boards/arm/mps2/Kconfig.defconfig:40, boards/Kconfig:88) was
+assigned the value '7' but got the value ''. Check these unsatisfied dependencies: QEMU_ICOUNT (=n).
+See http://docs.zephyrproject.org/latest/kconfig.html#CONFIG_QEMU_ICOUNT_SHIFT and/or look up
+QEMU_ICOUNT_SHIFT in the menuconfig/guiconfig interface. The Application Development Primer, Setting
+Configuration Values, and Kconfig - Tips and Best Practices sections of the manual might be helpful
+too.
+
+
+/home/athul/Workspace/Zephyr/adaptive_power_node/prj.conf:6: warning: ignoring malformed line 'CONSOLE_SERIAL=y'
+
+error: Aborting due to Kconfig warnings
+
+CMake Error at /home/athul/Workspace/Zephyr/zephyr/cmake/modules/kconfig.cmake:474 (message):
+  command failed with return code: 1
+Call Stack (most recent call first):
+  /home/athul/Workspace/Zephyr/zephyr/cmake/modules/zephyr_default.cmake:115 (include)
+  /home/athul/Workspace/Zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:57 (include)
+  /home/athul/Workspace/Zephyr/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:83 (include_boilerplate)
+  CMakeLists.txt:3 (find_package)
+
+
+FATAL ERROR: command exited with status 1: /usr/bin/cmake -DWEST_PYTHON=/home/athul/Workspace/Zephyr/.venv/bin/python3 -DWEST_TOPDIR=/home/athul/Workspace/Zephyr -DWEST_VERSION=1.5.0 -B/home/athul/Workspace/Zephyr/adaptive_power_node/build -GNinja '-DWEST_PYTHON_PROPERTIES="Python;3;14;7;64;;cpython-314-x86_64-linux-gnu.so;abi3;/usr/lib/python3.14;/home/athul/Workspace/Zephyr/.venv/lib/python3.14;/home/athul/Workspace/Zephyr/.venv/lib/python3.14/site-packages;/home/athul/Workspace/Zephyr/.venv/lib/python3.14/site-packages"' -DBOARD=mps2/an521/cpu0 -S/home/athul/Workspace/Zephyr/adaptive_power_node

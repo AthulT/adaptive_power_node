@@ -62,7 +62,7 @@ BT_GATT_SERVICE_DEFINE(power_svc,
 
 static const struct bt_data ad[] = {
     BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-    BT_DATA(BT_DATA_NAME_COMPLETE, "EFR32_M33_QEMU", 14),
+    BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME, sizeof(CONFIG_BT_DEVICE_NAME)-1),
 };
 
 int ble_power_svc_init(void) {
@@ -75,16 +75,7 @@ int ble_power_svc_init(void) {
     k_timer_init(&watchdog_timer, watchdog_expiry_fn, NULL);
     k_timer_start(&watchdog_timer, K_MSEC(LINK_TIMEOUT_MS), K_NO_WAIT);
 
-    /* Construct advertising parameters explicitly for Zephyr 3.x/4.x */
-    struct bt_le_adv_param adv_param = {
-        .id = 0,
-        .sid = 0,
-        .options = (1 << 0) | (1 << 3), /* BIT(0)=Connectable, BIT(3)=Use Name */
-        .interval_min = 0x0020,         /* 20 ms interval */
-        .interval_max = 0x0040,         /* 40 ms interval */
-        .peer = NULL,
-    };
-    err = bt_le_adv_start(&adv_param, ad, ARRAY_SIZE(ad), NULL, 0);
+    err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), NULL, 0);
     if (err) {
         printk("Advertising failed to start (err %d)\n", err);
         return err;
