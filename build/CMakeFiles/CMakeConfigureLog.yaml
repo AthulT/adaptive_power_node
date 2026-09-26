@@ -128,6 +128,30 @@ events:
         mode: "cps"
         reason: "no_exist"
       -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/athul/Workspace/Zephyr/adaptive_controller/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
         path: "/home/athul/Workspace/Zephyr/zephyr/ZephyrBuildConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -2334,8 +2358,8 @@ events:
     checks:
       - "Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
     directories:
-      source: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-ghGAhZ"
-      binary: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-ghGAhZ"
+      source: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-aOzGa7"
+      binary: "/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-aOzGa7"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -2346,11 +2370,11 @@ events:
       variable: "C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
       cached: true
       stdout: |
-        Change Dir: '/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-ghGAhZ'
+        Change Dir: '/home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-aOzGa7'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_a604e
-        [1/2] /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -std=c99   -Wformat-signedness -o CMakeFiles/cmTC_a604e.dir/src.c.obj -c /home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-ghGAhZ/src.c
-        [2/2] : && /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd  CMakeFiles/cmTC_a604e.dir/src.c.obj -o cmTC_a604e   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_746e5
+        [1/2] /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -std=c99   -Wformat-signedness -o CMakeFiles/cmTC_746e5.dir/src.c.obj -c /home/athul/Workspace/Zephyr/adaptive_power_node/build/CMakeFiles/CMakeScratch/TryCompile-aOzGa7/src.c
+        [2/2] : && /home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc -nostartfiles -nostdlib -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -isystem "/home/athul/Workspace/Zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/14.3.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd  CMakeFiles/cmTC_746e5.dir/src.c.obj -o cmTC_746e5   && :
         
       exitCode: 0
   -
