@@ -1,5 +1,6 @@
 import asyncio
 import time
+import random
 
 import bumble.logging
 import logging
@@ -56,8 +57,8 @@ def synthetic_rssi(t: float) -> float:
     half = DEMO_DURATION_S / 2.0
     frac = (t / half) if t <= half else ((DEMO_DURATION_S - t) / half)
     frac = max(0.0, min(1.0, frac))
-    return RSSI_STRONG + frac * (RSSI_WEAK - RSSI_STRONG)
-
+    trend = RSSI_STRONG + frac * (RSSI_WEAK - RSSI_STRONG)
+    return trend + random.gauss(0.0, 3.0) #+_3dB jitter,  like BLE RSSI
 
 class MedianFilter:
     """Median of the last n samples — mirrors sl_bt_connection_get_median_rssi()."""
@@ -271,6 +272,7 @@ async def main():
 
 
 if __name__ == "__main__":
+    random.seed(42)
     bumble.logging.setup_basic_logging("WARNING")
     logging.getLogger("bumble.controller").setLevel(logging.CRITICAL)
     try:
