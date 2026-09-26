@@ -1,6 +1,7 @@
 #Progress Till Now
 
 The code compiles using Zephyr, and is able to launch on qemu-arm.
+
 Build Command: west build -p -b mps2/an521/cpu0 .
 
 #Bug
@@ -8,8 +9,12 @@ Build Command: west build -p -b mps2/an521/cpu0 .
 Step 1: I run the built file using the command: qemu-system-arm -M mps2-an521 -cpu cortex-m33 \
     -kernel ./build/zephyr/zephyr.elf \
     -nographic -serial pty -serial pty
+
+
 Step 2: I attach the provided UART terminal with bluetooth HCI using the command: sudo btattach -B /dev/pts/8 -S 115200 -P h4 -N
 (Here, serial port is /dev/pts/8)
+
+
 Step 3: When I do hciconfig -a
 hci1:	Type: Primary  Bus: UART
 	BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0
@@ -21,6 +26,7 @@ hci1:	Type: Primary  Bus: UART
 	Link policy: 
 	Link mode: PERIPHERAL ACCEPT 
 i.e., the bluetooth link is down. hence, the python script is unable to run, and I am not able to see any logs either
+
 
 Other hints: Output of btmon:
 = New Index: 00:00:00:00:00:00 (Primary,UART,hci1)                     [hci1] 7.239913
