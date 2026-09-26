@@ -1,8 +1,10 @@
 #Progress Till Now
+
 The code compiles using Zephyr, and is able to launch on qemu-arm.
 Build Command: west build -p -b mps2/an521/cpu0 .
 
 #Bug
+
 Step 1: I run the built file using the command: qemu-system-arm -M mps2-an521 -cpu cortex-m33 \
     -kernel ./build/zephyr/zephyr.elf \
     -nographic -serial pty -serial pty
